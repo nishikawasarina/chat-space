@@ -38,7 +38,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|text|null: false|
+|name|string|null: false|
 ### Association
 - has_many :usrs, through:  :groups_users
 - has_many :messages
