@@ -1,0 +1,34 @@
+.main-chat
+  .main-chat__group-info
+    .group-info__left
+      .group-info__left--name
+        techcamp
+      .group-info__left--member
+        Member : sarina
+    .group-info__right
+      = link_to "#", class: "edit-btn" do
+        Edit
+  .main-chat__message-list
+    .message
+      .message__user
+        .message__user--name
+          sarina
+        .message__user--time
+          2020/03/06(Fri) 15:44:56
+      .message__text
+        こんにちは！
+    .message
+      .message__user
+        .message__user--name
+          sarina
+        .message__user--time
+          2020/03/06(Fri) 15:44:56
+      .message__text
+        寒いね！
+  .main-chat__message-form
+    .input-box
+      %input.input-box__text{ type: "text", placeholder: "type a message"}
+      %label{class: "input-box__img"}
+        %i.fa.fa-image
+        %input.input-box__img--file{type: "file"}
+    %input.send-btn{ type: "submit", value: "Send"} 
