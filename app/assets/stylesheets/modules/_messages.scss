@@ -152,13 +152,10 @@
         right: 49px;
         font-size: 1.3rem;
         height: 100%;
-        .fa-image :before{
-          content: "\f03e"
-        }
-        .fa-image{
+        .icon{
           color: black;
         }
-        &--file {
+        .hidden {
           display: none;
         }
       }

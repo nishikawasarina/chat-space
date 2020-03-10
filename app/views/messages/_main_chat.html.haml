@@ -27,8 +27,9 @@
         寒いね！
   .main-chat__message-form
     .input-box
-      %input.input-box__text{ type: "text", placeholder: "type a message"}
-      %label{class: "input-box__img"}
-        %i.fa.fa-image
-        %input.input-box__img--file{type: "file"}
-    %input.send-btn{ type: "submit", value: "Send"} 
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'input-box__img' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'submit'
