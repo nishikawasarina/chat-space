@@ -21,6 +21,7 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     width: 100%;
+    overflow: scroll;
     .group {
       padding: 20px 0px 40px 0px;
       margin: 0px 20px;
@@ -112,6 +113,7 @@
     height: calc(100vh - 100px - 90px);
     width: 100%;
     padding:$side-space;
+    overflow: scroll;
     .message {
       padding: 35px 0px 46px 0px;
       &__user {
