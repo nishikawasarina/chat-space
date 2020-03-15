@@ -1,9 +1,8 @@
 $(function(){
 
   function buildHTML(message){
-    // 「もしメッセージに画像が含まれていたら」という条件式
     if (message.image) {
-      var html = //メッセージに画像が含まれる場合のHTMLを作る
+      var html =
         `<div class="message">
           <div class="message__user">
             <div class="message__user--name">
@@ -22,7 +21,7 @@ $(function(){
         </div>`
       return html;
     } else {
-      var html = //メッセージに画像が含まれない場合のHTMLを作る
+      var html =
         `<div class="message">
           <div class="message__user">
             <div class="message__user--name">
@@ -43,7 +42,6 @@ $(function(){
   }
 
   $('#new_message').on('submit', function(e){
-    //console.log('hoge');
     e.preventDefault()
     var formData = new FormData(this);
     var url = $(this).attr('action');
@@ -64,6 +62,6 @@ $(function(){
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-  });
+    });
   });
 });
